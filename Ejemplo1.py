@@ -62,5 +62,20 @@ def calcular_total(compra):
       precios.append(item[1])
   total = sum(precios)
   return total
-      
+
+def mostrar_factura(compra,datos_comprador):
+  print("\n Factura: ")
+  print("\n Datos del comprador \n")
+  print("Nombre:", datos_comprador[0])
+  print("Identificación:", datos_comprador[1])
+  print("Dirección:", datos_comprador[2])
+  print("Teléfono:", datos_comprador[3])
+  print("Artículos comprados: ")
+  for item in compra:
+    if len(item) == 3:
+      print(f"{item[0]} - {item[1]} - ${item[2]}")
+    else:
+      print(f"{item[0]} - {item[1]}")
+  print("Total de la compra: ", calcular_total(compra))
+  
         
