@@ -77,7 +77,7 @@ def mostrar_factura(compra,datos_comprador):
     else:
       print(f"{item[0]} - {item[1]}")
   print("Total de la compra: ", calcular_total(compra))
-
+        
 def main():
     while True:
       datos = datos_comprador()
@@ -91,7 +91,19 @@ def main():
           elif tipo_articulo == 3:
             articulo = seleccionar_articulo(zapatos)
           else:
-            print(""Tipo de artículo no válido.")
+            print("Tipo de artículo no válido.")
+            continue
+        except ValueError:
+                print("Por favor ingrese solo números")
+                continue
+        compras.append(articulo)
+        mostrar_factura(compras, datos)
+              
+
+
+        
+        
+            
        
             
             
