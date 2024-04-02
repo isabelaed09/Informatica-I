@@ -77,5 +77,9 @@ def mostrar_factura(compra,datos_comprador):
     else:
       print(f"{item[0]} - {item[1]}")
   print("Total de la compra: ", calcular_total(compra))
+
+def main():
+
+    
   
         
