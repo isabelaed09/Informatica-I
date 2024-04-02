@@ -16,3 +16,6 @@ zapatos = { 1: ["botas", "cafe", 25],
            2: ["tenis", "azul", 20],
            3: ["botas", "negro", 25],
            4: ["tenis", "blanco", 20]}
+
+compras= []
+
