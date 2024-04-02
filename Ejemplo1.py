@@ -52,5 +52,15 @@ def seleccionar_articulo(diccionario):
     except ValueError:
       print("Por favor ingrese solo números")
   return diccionario[seleccion]
+
+def calcular_total(compra):
+  precios=[]
+  for item in compra:
+    if len(item) == 3:
+      precios.append(item[2])
+    else:
+      precios.append(item[1])
+  total = sum(precios)
+  return total
       
         
