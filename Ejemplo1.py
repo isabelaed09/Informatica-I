@@ -19,3 +19,17 @@ zapatos = { 1: ["botas", "cafe", 25],
 
 compras= []
 
+def datos_comprador():
+  while True:
+    nombre_apellido = input("Ingrese su nombre y apellido: ")
+    identificacion = input("Ingrese su número de identificación (SOLO NÚMEROS): ")
+    telefono = input("Ingrese su número de teléfono (SOLO NÚMEROS): ")
+    try:
+      identificacion = int(identificacion)
+      telefono = int(telefono)
+      break
+    except ValueError:
+      print("Por favor ingrese solo números para el telefono y la identificación")
+  direccion=input("Ingrese su dirección: ")
+  return nombre_apellido, identificacion, direccion, telefono
+    
