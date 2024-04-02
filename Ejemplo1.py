@@ -80,7 +80,22 @@ def mostrar_factura(compra,datos_comprador):
 
 def main():
     while True:
-    datos = datos_comprador()
+      datos = datos_comprador()
+      for i in range(3):
+        try:
+          tipo_articulo = (int(input("\nSeleccione el tipo de artículo \n1.camisetas\n2.jeans\n3.zapatos: ")))
+          if tipo_articulo == 1:
+            articulo = seleccionar_articulo(camisetas)
+          elif tipo_articulo == 2:
+            articulo = seleccionar_articulo(jeans)
+          elif tipo_articulo == 3:
+            articulo = seleccionar_articulo(zapatos)
+          else:
+            print(""Tipo de artículo no válido.")
+       
+            
+            
+  
 
     
   
