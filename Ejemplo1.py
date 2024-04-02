@@ -98,6 +98,18 @@ def main():
                 continue
         compras.append(articulo)
         mostrar_factura(compras, datos)
+        otra_compra= input("\n ¿Deseas realizar otra compra? (si / no): ")
+        if otra_compra.lower() != "si":
+          break
+        else:
+          compras.clear()
+
+if __name__ == "__main__":
+  main()
+  
+
+
+  
               
 
 
