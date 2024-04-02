@@ -32,4 +32,25 @@ def datos_comprador():
       print("Por favor ingrese solo números para el telefono y la identificación")
   direccion=input("Ingrese su dirección: ")
   return nombre_apellido, identificacion, direccion, telefono
+
+def seleccionar_articulo(diccionario):
+  while True:
+    print("ARTÍCULOS DISPONIBLES")
+    for clave, valor in diccionario.items():
+      if len(valor) == 3:
+        print(f"{clave}: {valor[0]} - {valor[1]} - ${valor[2]}")
+      else: 
+        print(f"{clave}: {valor[0]} - {valor[1]}")
+    try:
+      seleccion = int(input("Seleccione el número del artículo que desea comprar: "))
+      if seleccion in diccionario:
+        break
+      else:
+        print("Número de artículo no válido")
     
+
+    except ValueError:
+      print("Por favor ingrese solo números")
+  return diccionario[seleccion]
+      
+        
